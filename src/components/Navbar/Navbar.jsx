@@ -3,7 +3,7 @@ import commercifylogo from '../../assets/images/Colorlogo.png';
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-pink-100 py-4">
+    <header className="w-full bg-[#fdf7ed] py-4">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 gap-4">
         
         {/* Logo */}

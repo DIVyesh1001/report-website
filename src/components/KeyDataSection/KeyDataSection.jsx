@@ -1,68 +1,55 @@
-import React, { useState } from 'react';
-import reportPDF from '../../assets/report.pdf';
-import Carousel from '../Carousel/Carousel';
+import React,{useState} from 'react'
+import FlipCard from '../FlipCard/FlipCard'
 
-const images = [
-    'https://images.pexels.com/photos/32390716/pexels-photo-32390716.jpeg',
-    'https://images.pexels.com/photos/29247080/pexels-photo-29247080.jpeg',
-    'https://images.pexels.com/photos/18766295/pexels-photo-18766295.jpeg',
-  ];
-
-export default function CarouselSection() {
+export default function KeyDataSection() {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: ''
-    });
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleDownload = (e) => {
-        e.preventDefault();
-        const { firstName, lastName, email } = formData;
-
-        // Simple validation
-        if (!firstName || !lastName || !email) {
-            alert('Please fill in all fields.');
-            return;
-        }
-
-        // Create a hidden link and trigger download
-        const link = document.createElement('a');
-        link.href = reportPDF;
-        link.setAttribute('download', '2024_Report.pdf');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
+            firstName: '',
+            lastName: '',
+            email: ''
+        });
+    
+        const handleChange = (e) => {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
+    
+        const handleDownload = (e) => {
+            e.preventDefault();
+            const { firstName, lastName, email } = formData;
+    
+            // Simple validation
+            if (!firstName || !lastName || !email) {
+                alert('Please fill in all fields.');
+                return;
+            }
+    
+            // Create a hidden link and trigger download
+            const link = document.createElement('a');
+            link.href = reportPDF;
+            link.setAttribute('download', '2024_Report.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
     return (
-        <div className="min-h-screen bg-white px-8 py-16 flex items-start justify-center">
-            <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-22">
-
-                {/* Left Side */}
-                <div className="space-y-8 m-10">
-                    {/* Carousel (static preview here) */}
-                    <Carousel images={images}/>
-
-
-                    {/* Research Findings */}
-                    <div>
-                        <h3 className="text-lg font-bold mb-4">Here’s what our research uncovered:</h3>
-                        <ul className="list-disc pl-5 space-y-3 text-gray-800">
-                            <li>To counter inflation, more shoppers plan to compare products online to find the best deals and prices.</li>
-                            <li>Marketplaces like Amazon and Walmart are the most preferred shopping channels amongst the majority of shoppers.</li>
-                            <li>More shoppers plan to increase retail spending in 2024 vis a vis the previous year, even amidst economic instability.</li>
-                            <li>Shoppers base their buying decisions on the content and image quality of product pages.</li>
-                            <li>Google Search followed by Amazon.com are the top choices to begin product search online.</li>
-                        </ul>
-                    </div>
+        <div className='flex flex-row p-10 gap-10 bg-[#fdf7ed]'>
+            <div className='grid grid-row-1 flex-1'>
+                <span className='text-5xl mb-5' >KEY DATA</span>
+                <div className='grid grid-cols-2 grid-rows-2 gap-4 mr-10 mb-10'>
+                    <FlipCard front={"Front"} back={"back"} />
+                    <FlipCard front={"Front"} back={"back"} />
+                    <FlipCard front={"Front"} back={"back"} />
+                    <FlipCard front={"Front"} back={"back"} />
                 </div>
+                <div className=''>
+                    <span className='text-5xl '>KEY INSIGHTS</span>
+                    <p className='text-xl mb-5 mt-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero aperiam unde corporis aliquid laboriosam, debitis voluptate repellat deserunt voluptas deleniti!</p>
+                    <p className='text-xl '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero aperiam unde corporis aliquid laboriosam, debitis voluptate repellat deserunt voluptas deleniti!</p>
+                </div>
+            </div>
+            {/* form */}
+            <div className='flex-1 align-center justify-center items-center'>
 
-                {/* Right Side Form */}
-                <div className="bg-white shadow-xl p-8 rounded-4xl w-full max-w-lg border border-gray-100">
+                <div className="bg-[#f6e7d6] shadow-xl justify-self-center p-8 rounded-4xl w-full max-w-lg border border-[#c6714a] ">
                     <h2 className="text-2xl font-bold mb-6">Get Your Free Copy</h2>
 
                     <form onSubmit={handleDownload} className="space-y-4">
@@ -119,5 +106,5 @@ export default function CarouselSection() {
                 </div>
             </div>
         </div>
-    );
+    )
 }

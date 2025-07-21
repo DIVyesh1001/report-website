@@ -1,48 +1,39 @@
-import React from 'react'
-import FlipCard from '../FlipCard/FlipCard'
+import React from 'react';
 
 export default function HeroSection() {
     return (
-        <div className="min-h-screen bg-pink-100 px-8 py-12 flex items-start justify-center ">
-            <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 ml-10 mr-10 mt-10 ">
-                {/* Left Section */}
-                <div>
-                    <h1 className="text-4xl font-bold text-black mb-4  font-times">2024 Consumer Buying Behavior Report</h1>
-                    <p className="text-gray-700 mb-6  ">
-                        Intelligence Node surveyed 1000+ US shoppers to decode the nuances of consumer behavior in an ever-evolving retail landscape. The research assesses the impact of inflation on US consumers, understanding how economic factors shape purchasing decisions, particularly as shoppers increasingly leverage digital tools like image search and online product research for the best prices. The report also spotlights several key themes surrounding the digital shopper today including the digital shelf, sustainable retail, product content, and more. This understanding is critical for retailers and brands to tailor their strategies in a changing economic landscape.
-                    </p>
-                    <a href="src\assets\report.pdf"
-                        download className="bg-red-400 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-500">
-                        DOWNLOAD REPORT
-                    </a>
-                </div>
+        <section className="relative  min-h-screen bg-[#fdf7ed] px-6 md:px-12 py-16 flex overflow-hidden">
+            
 
-                {/* Right Section */}
-                <div>
-                    <h2 className="flex flex-col text-2xl font-bold text-black mb-6">
-                        <span className='text-center'>Top trends based on the survey of</span>
-                        <span className='text-center'>1000 US shoppers:</span>
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <FlipCard
-                            front="Price sensitivity reaches new heights"
-                            back="Shoppers are more price-conscious than ever before due to inflation."
-                        />
-                        <FlipCard
-                            front="Free, fast delivery wins hearts"
-                            back="Delivery expectations continue to shape purchase decisions."
-                        />
-                        <FlipCard
-                            front="Shoppers use tested channels to discover products online"
-                            back="Search engines, reviews, and comparison tools are key discovery methods."
-                        />
-                        <FlipCard
-                            front="Product page content gains importance"
-                            back="High-quality content builds trust and drives conversions."
-                        />
-                    </div>
+            <div className='flex flex-col relative z-10'>
+                <div className='flex flex-col'>
+                    <span className='text-8xl font-times'>K-Beauty in </span>
+                    <span className='text-8xl mt-5 font-times'>India:2025 Report </span>
+                </div>
+                <div className='mt-10'>
+                    <span className='text-3xl'>Trends & Consumer insights by Datum,</span><br />
+                    <span className='text-3xl '>in patnership with Kindlife & Unomer</span>
+                </div>
+                
+                <a
+                    href="src/assets/report.pdf"
+                    download
+                    className="inline-block mt-10 w-60 bg-[#c6714a] text-white text-sm text-center md:text-base px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-[#e0b394] shadow-md"
+                >
+                    DOWNLOAD REPORT
+                </a>
+                <div className='grid grid-cols-3 mt-10'>
+                    <img src='src\assets\images\Colorlogo.png' className='bg-cover w-50'></img>
+                    <img src='src\assets\images\kindlife-nobackground.png' className='bg-cover w-50'></img>
+                    <img src='src\assets\images\unomer-nobackground.png' className='bg-cover w-50'></img>
                 </div>
             </div>
-        </div>
-    )
+
+
+            {/* hero image */}
+            <div className='overflow-hidden'>
+                <img src="src\assets\images\main-image.png" alt=""  className='absolute z-5  w-[80vh] '/>
+            </div>
+        </section>
+    );
 }
