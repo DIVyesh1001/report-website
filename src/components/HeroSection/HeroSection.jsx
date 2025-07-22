@@ -27,15 +27,15 @@ export default function HeroSection() {
                 </a>
 
                 {/* Partner Logos */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8">
+                <div className="grid  grid-cols-3 gap-4 mt-8">
                     <img src="https://i.postimg.cc/28RnmZfT/Colorlogo.png" alt="Datum" className="object-contain w-full h-8" />
-                    <img src="https://i.postimg.cc/zGqWHYvg/kindlife-nobackground.png" alt="Kindlife" className="object-contain w-full h-8" />
+                    <img src="https://i.postimg.cc/zGqWHYvg/kindlife-nobackground.png" alt="Kindlife" className="object-contain w-full h-8 " />
                     <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain w-full h-8" />
                 </div>
             </div>
 
             {/* Hero Image */}
-            <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <div className="lg:mt-0 lg:col-span-5 lg:flex">
                 <img
                     src="https://i.postimg.cc/0yZSpXKH/main-image.png"
                     alt="Main Visual"

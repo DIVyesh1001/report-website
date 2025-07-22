@@ -12,21 +12,22 @@ export default function KeyDataSection() {
     };
 
     const handleDownload = (e) => {
-        e.preventDefault();
-        const { firstName, lastName, email } = formData;
+    e.preventDefault();
+    const { firstName, lastName, email } = formData;
 
-        if (!firstName || !lastName || !email) {
-            alert('Please fill in all fields.');
-            return;
-        }
+    if (!firstName || !lastName || !email) {
+        alert('Please fill in all fields.');
+        return;
+    }
 
-        const link = document.createElement('a');
-        link.href = reportPDF;
-        link.setAttribute('download', '2024_Report.pdf');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/file/d/1SWQbXI7qtzgFSvu0XM4cd_UN14WHKnoA/view?usp=sharing';
+    link.setAttribute('download', 'KBeauty_Report.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
 
     return (
         <section className="bg-[#fdf7ed] px-4 md:px-12 py-12">
@@ -45,7 +46,7 @@ export default function KeyDataSection() {
                 {/* Tilted Image */}
                 <div className="flex justify-center items-center">
                     <img
-                        className="rounded-lg mb-6 transform perspective-[1000px] rotate-y-[10deg] rotate-x-[15deg] shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[90%]"
+                        className="rounded-lg mb-6 transform perspective-[1000px] rotate-y-[10deg] rotate-x-[15deg] shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[70%]"
                         src="https://i.postimg.cc/28rNP03w/Screenshot-2025-07-22-120523.png"
                         alt="Key Visual"
                     />
@@ -57,9 +58,6 @@ export default function KeyDataSection() {
                 <div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY INSIGHTS</h2>
                     <div className="space-y-6 text-lg md:text-xl leading-relaxed">
-                        <div>
-                            <strong>India’s K-Beauty Market Is Set to Cross $1.5 Billion by 2030:</strong> With a CAGR of 25.9%, K-Beauty is India’s fastest-growing beauty segment, outpacing traditional skincare categories and unlocking new opportunities for brands focused on efficacy, culture, and innovation.
-                        </div>
 
                         <div>
                             <strong>Gen Z & Gen Alpha Are Redefining Beauty Discovery:</strong> These consumers are tech-native, curiosity-led, and community-driven. Discovery happens through AI search, peer recommendations, influencers, and K-culture touchpoints - not through traditional advertising.

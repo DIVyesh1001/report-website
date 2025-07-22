@@ -4,7 +4,7 @@ import commercifylogo from '../../assets/images/Colorlogo.png';
 export default function Navbar() {
   return (
     <header className="w-full bg-[#fdf7ed] py-4">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 gap-4">
+      <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-4 sm:px-8 gap-4">
         
         {/* Logo */}
         <div
@@ -14,7 +14,7 @@ export default function Navbar() {
 
         {/* Button */}
         <div className="text-center">
-          <button className="relative group border border-black rounded-full px-5 py-2 overflow-hidden transition">
+          <button className="relative group border border-black rounded-full w-55 px-5 py-2 overflow-hidden transition">
             <span className="relative z-10 text-black text-sm font-bold transition-colors duration-100 group-hover:text-blue-700">
               GO TO HOMEPAGE
             </span>
