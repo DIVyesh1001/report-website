@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import reportPDF from '../../assets/report.pdf';
+
 import Carousel from '../Carousel/Carousel';
 
 const images = [

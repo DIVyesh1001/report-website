@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
-import reportPDF from '../../assets/report.pdf'; // Ensure this path is valid
-
 export default function KeyDataSection() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -47,7 +45,7 @@ export default function KeyDataSection() {
                 {/* Tilted Image */}
                 <div className="flex justify-center items-center">
                     <img
-                        className="rounded-lg mb-6 transform perspective-[1000px] rotate-y-[10deg] rotate-x-[15deg] shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[100%]"
+                        className="rounded-lg mb-6 transform perspective-[1000px] rotate-y-[10deg] rotate-x-[15deg] shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[90%]"
                         src="https://i.postimg.cc/28rNP03w/Screenshot-2025-07-22-120523.png"
                         alt="Key Visual"
                     />
@@ -71,9 +69,6 @@ export default function KeyDataSection() {
                             <strong>Cultural Influence Is Converting Curiosity Into Consumption:</strong> From K-pop and K-dramas to K-food and fashion, Korean culture is shaping beauty preferences, accelerating adoption beyond metros into Tier-2 India.
                         </div>
 
-                        <div>
-                            <strong>Discovery Is the New Shelf:</strong> Consumers view their beauty shelf as a space for trial, discovery, and rotation. Loyalty is product-led, not brand-bound. Efficacy earns repurchase, not just brand equity.
-                        </div>
 
                         <div>
                             <strong>Influencers & Reviews Drive Decisions, Not Discounts Alone:</strong> Authentic creators, social proof, and real-world efficacy matter more than promotions. 51% are likely to buy K-Beauty endorsed by K-pop idols. 86% say reviews seal the purchase.
@@ -83,15 +78,13 @@ export default function KeyDataSection() {
                             <strong>Omnichannel Matters But Digital Leads the Way:</strong> Consumers are fluid across platforms—from quick commerce to D2C websites—but digital-first discovery dominates. Offline is important for trust, but digital drives trial and repeat.
                         </div>
 
-                        <div>
-                            <strong>Barriers Still Exist - Price, Awareness, and Access:</strong> Consumers cite price, access, and clarity as key barriers. Yet, 80% are willing to pay more for quality when trust is established through visibility, endorsements, and education.
-                        </div>
+                        
                     </div>
                 </div>
 
                 {/* DOWNLOAD FORM */}
 
-                <div id='download' className="bg-[#f6e7d6]  h-fit w-full shadow-xl p-8 rounded-3xl border border-[#c6714a]">
+                <div id='download' className="bg-[#f6e7d6] place-self-center h-fit w-full shadow-xl p-8 rounded-3xl border border-[#c6714a]">
                     <h2 className="text-3xl sm:text-4xl text-center mb-6">Download the full Report</h2>
                     <form onSubmit={handleDownload} className="space-y-4">
                         <div>
