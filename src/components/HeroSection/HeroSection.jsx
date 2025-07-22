@@ -27,7 +27,7 @@ export default function HeroSection() {
                 </a>
 
                 {/* Partner Logos */}
-                <div className="grid  grid-cols-3 gap-4 mt-8">
+                <div className="grid  grid-cols-3 gap-4 mt-8 mb-8 sm:mb-2">
                     <img src="https://i.postimg.cc/28RnmZfT/Colorlogo.png" alt="Datum" className="object-contain w-full h-8" />
                     <img src="https://i.postimg.cc/zGqWHYvg/kindlife-nobackground.png" alt="Kindlife" className="object-contain w-full h-8 " />
                     <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain w-full h-8" />
