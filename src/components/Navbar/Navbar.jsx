@@ -9,7 +9,7 @@ export default function Navbar() {
         {/* Logo */}
         <div
           className="w-48 h-12 bg-center bg-contain bg-no-repeat"
-          style={{ backgroundImage: `url(${commercifylogo})` }}
+          // style={{ backgroundImage: `url(${commercifylogo})` }}
         ></div>
 
         {/* Button */}

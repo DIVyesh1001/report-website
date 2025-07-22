@@ -8,38 +8,33 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full">
+    <footer className="w-full ">
       {/* Top Row */}
-      <div className="flex flex-col md:flex-row items-center justify-between px-8 py-6 bg-white border-t">
+      <div className="flex flex-col  md:flex-row items-center justify-between px-8 py-6 bg-[#f5d8be] border-t">
         {/* Logo */}
-        <div className="flex items-center gap-2 mb-4 md:mb-0">
-          <img
+        <div className="flex items-center gap-2 mb-4 md:mb-0"> 
+          {/* <img
             src="src\assets\images\Colorlogo.png" // Replace with your logo path
             alt="Intelligence Node"
             className="h-10 w-auto"
-          />
+          /> */}
         </div>
 
         {/* Social Icons */}
         <div className="flex gap-6 text-gray-700 text-xl">
-          <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-          <a href="#" aria-label="Instagram"><FaInstagram /></a>
-          <a href="#" aria-label="Twitter"><FaTwitter /></a>
-          <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+          <a href="https://www.instagram.com/datumintell_in?igsh=MTdnMHp3djNzYmFybA==" aria-label="Instagram"><FaInstagram /></a>
+          <a href="https://www.linkedin.com/company/datum-intell/" aria-label="LinkedIn"><FaLinkedinIn /></a>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="bg-gray-700 text-white px-8 py-4 flex flex-col md:flex-row justify-between items-center text-sm gap-2">
         <div className="flex items-center gap-4">
-          <p>© 2025 Intelligence Node</p>
-          <p className="hidden sm:inline">marketing@intelligencenode.com</p>
+          <p>© 2025 by Datum</p>
+          <p className="hidden sm:inline">hello@datumintell.com</p>
         </div>
 
-        <div className="flex items-center gap-6">
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">Terms of Use</a>
-        </div>
+        
       </div>
     </footer>
   );

@@ -2,37 +2,45 @@ import React from 'react';
 
 export default function HeroSection() {
     return (
-        <section className="relative  min-h-screen bg-[#fdf7ed] px-6 md:px-12 py-16 flex overflow-hidden">
+        <section className="grid max-w-screen-full px-15 bg-[#fdf7ed]  lg:gap-8 xl:gap-0  lg:grid-cols-12">
             
+            {/* Content */}
+            <div className="mr-auto lg:col-span-7">
+                <div>
+                    <h1 className=" text-5xl md:text-7xl lg:text-7xl leading-tight">
+                        K-Beauty in
+                    </h1>
+                    <h1 className="font-times text-5xl md:text-7xl lg:text-7xl mt-1 leading-tight">
+                        India: 2025 Report
+                    </h1>
+                </div>
 
-            <div className='flex flex-col relative z-10'>
-                <div className='flex flex-col'>
-                    <span className='text-8xl font-times'>K-Beauty in </span>
-                    <span className='text-8xl mt-5 font-times'>India:2025 Report </span>
+                <div className="text-xl md:text-2xl mt-5 mb-10 leading-relaxed">
+                    <p>Trends & Consumer insights by Datum.</p>
                 </div>
-                <div className='mt-10'>
-                    <span className='text-3xl'>Trends & Consumer insights by Datum,</span><br />
-                    <span className='text-3xl '>in patnership with Kindlife & Unomer</span>
-                </div>
-                
+
                 <a
-                    href="src/assets/report.pdf"
-                    download
-                    className="inline-block mt-10 w-60 bg-[#c6714a] text-white text-sm text-center md:text-base px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-[#e0b394] shadow-md"
+                    href="#download"
+                    className="inline-block w-60 bg-[#c6714a] text-white text-center text-sm md:text-base px-6 py-3 mt-1 mb-5 rounded-full font-semibold transition duration-300 hover:bg-[#e0b394] shadow-md"
                 >
                     DOWNLOAD REPORT
                 </a>
-                <div className='grid grid-cols-3 mt-10'>
-                    <img src='src\assets\images\Colorlogo.png' className='bg-cover w-50'></img>
-                    <img src='src\assets\images\kindlife-nobackground.png' className='bg-cover w-50'></img>
-                    <img src='src\assets\images\unomer-nobackground.png' className='bg-cover w-50'></img>
+
+                {/* Partner Logos */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8">
+                    <img src="https://i.postimg.cc/28RnmZfT/Colorlogo.png" alt="Datum" className="object-contain w-full h-8" />
+                    <img src="https://i.postimg.cc/zGqWHYvg/kindlife-nobackground.png" alt="Kindlife" className="object-contain w-full h-8" />
+                    <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain w-full h-8" />
                 </div>
             </div>
 
-
-            {/* hero image */}
-            <div className='overflow-hidden'>
-                <img src="src\assets\images\main-image.png" alt=""  className='absolute z-5  w-[80vh] '/>
+            {/* Hero Image */}
+            <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <img
+                    src="https://i.postimg.cc/0yZSpXKH/main-image.png"
+                    alt="Main Visual"
+                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[70vh] object-contain z-0"
+                />
             </div>
         </section>
     );

@@ -1,57 +1,98 @@
-import React,{useState} from 'react'
-import FlipCard from '../FlipCard/FlipCard'
+import React, { useState } from 'react';
+import Card from '../Card/Card';
+import reportPDF from '../../assets/report.pdf'; // Ensure this path is valid
 
 export default function KeyDataSection() {
     const [formData, setFormData] = useState({
-            firstName: '',
-            lastName: '',
-            email: ''
-        });
-    
-        const handleChange = (e) => {
-            setFormData({ ...formData, [e.target.name]: e.target.value });
-        };
-    
-        const handleDownload = (e) => {
-            e.preventDefault();
-            const { firstName, lastName, email } = formData;
-    
-            // Simple validation
-            if (!firstName || !lastName || !email) {
-                alert('Please fill in all fields.');
-                return;
-            }
-    
-            // Create a hidden link and trigger download
-            const link = document.createElement('a');
-            link.href = reportPDF;
-            link.setAttribute('download', '2024_Report.pdf');
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        };
+        firstName: '',
+        lastName: '',
+        email: '',
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleDownload = (e) => {
+        e.preventDefault();
+        const { firstName, lastName, email } = formData;
+
+        if (!firstName || !lastName || !email) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        const link = document.createElement('a');
+        link.href = reportPDF;
+        link.setAttribute('download', '2024_Report.pdf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
-        <div className='flex flex-row p-10 gap-10 bg-[#fdf7ed]'>
-            <div className='grid grid-row-1 flex-1'>
-                <span className='text-5xl mb-5' >KEY DATA</span>
-                <div className='grid grid-cols-2 grid-rows-2 gap-4 mr-10 mb-10'>
-                    <FlipCard front={"Front"} back={"back"} />
-                    <FlipCard front={"Front"} back={"back"} />
-                    <FlipCard front={"Front"} back={"back"} />
-                    <FlipCard front={"Front"} back={"back"} />
-                </div>
+        <section className="bg-[#fdf7ed] px-4 md:px-12 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                {/* KEY DATA Cards */}
                 <div className=''>
-                    <span className='text-5xl '>KEY INSIGHTS</span>
-                    <p className='text-xl mb-5 mt-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero aperiam unde corporis aliquid laboriosam, debitis voluptate repellat deserunt voluptas deleniti!</p>
-                    <p className='text-xl '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero aperiam unde corporis aliquid laboriosam, debitis voluptate repellat deserunt voluptas deleniti!</p>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY DATA</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        <Card heading="$45B" text="beauty and personal care market size in India by 2030" />
+                        <Card heading="$1.5B" text="K-beauty market size in India by 2030 " />
+                        <Card heading="25.9%" text="CAGR (2024-30) for K-beauty segment" />
+                        <Card heading="2X" text="increase in K-beauty buyers in India by 2030" />
+                    </div>
+                </div>
+
+                {/* Tilted Image */}
+                <div className="flex justify-center items-center">
+                    <img
+                        className="rounded-lg mb-6 transform perspective-[1000px] rotate-y-[10deg] rotate-x-[15deg] shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[100%]"
+                        src="https://i.postimg.cc/28rNP03w/Screenshot-2025-07-22-120523.png"
+                        alt="Key Visual"
+                    />
                 </div>
             </div>
-            {/* form */}
-            <div className='flex-1 align-center justify-center items-center'>
 
-                <div className="bg-[#f6e7d6] shadow-xl justify-self-center p-8 rounded-4xl w-full max-w-lg border border-[#c6714a] ">
-                    <h2 className="text-2xl font-bold mb-6">Get Your Free Copy</h2>
+            {/* KEY INSIGHTS Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
+                <div>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY INSIGHTS</h2>
+                    <div className="space-y-6 text-lg md:text-xl leading-relaxed">
+                        <div>
+                            <strong>India’s K-Beauty Market Is Set to Cross $1.5 Billion by 2030:</strong> With a CAGR of 25.9%, K-Beauty is India’s fastest-growing beauty segment, outpacing traditional skincare categories and unlocking new opportunities for brands focused on efficacy, culture, and innovation.
+                        </div>
 
+                        <div>
+                            <strong>Gen Z & Gen Alpha Are Redefining Beauty Discovery:</strong> These consumers are tech-native, curiosity-led, and community-driven. Discovery happens through AI search, peer recommendations, influencers, and K-culture touchpoints - not through traditional advertising.
+                        </div>
+
+                        <div>
+                            <strong>Cultural Influence Is Converting Curiosity Into Consumption:</strong> From K-pop and K-dramas to K-food and fashion, Korean culture is shaping beauty preferences, accelerating adoption beyond metros into Tier-2 India.
+                        </div>
+
+                        <div>
+                            <strong>Discovery Is the New Shelf:</strong> Consumers view their beauty shelf as a space for trial, discovery, and rotation. Loyalty is product-led, not brand-bound. Efficacy earns repurchase, not just brand equity.
+                        </div>
+
+                        <div>
+                            <strong>Influencers & Reviews Drive Decisions, Not Discounts Alone:</strong> Authentic creators, social proof, and real-world efficacy matter more than promotions. 51% are likely to buy K-Beauty endorsed by K-pop idols. 86% say reviews seal the purchase.
+                        </div>
+
+                        <div>
+                            <strong>Omnichannel Matters But Digital Leads the Way:</strong> Consumers are fluid across platforms—from quick commerce to D2C websites—but digital-first discovery dominates. Offline is important for trust, but digital drives trial and repeat.
+                        </div>
+
+                        <div>
+                            <strong>Barriers Still Exist - Price, Awareness, and Access:</strong> Consumers cite price, access, and clarity as key barriers. Yet, 80% are willing to pay more for quality when trust is established through visibility, endorsements, and education.
+                        </div>
+                    </div>
+                </div>
+
+                {/* DOWNLOAD FORM */}
+
+                <div id='download' className="bg-[#f6e7d6]  h-fit w-full shadow-xl p-8 rounded-3xl border border-[#c6714a]">
+                    <h2 className="text-3xl sm:text-4xl text-center mb-6">Download the full Report</h2>
                     <form onSubmit={handleDownload} className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium mb-1 text-gray-800">
@@ -94,7 +135,11 @@ export default function KeyDataSection() {
 
                         <button
                             type="submit"
-                            className="w-full bg-red-400 hover:bg-red-500 text-white font-bold py-2 rounded-md transition"
+                            disabled={!formData.firstName || !formData.lastName || !formData.email}
+                            className={`w-full text-white text-sm md:text-base px-6 py-3 rounded-full font-semibold transition duration-300 shadow-md 
+        ${!formData.firstName || !formData.lastName || !formData.email
+                                    ? 'bg-[#c6714a] opacity-50 cursor-not-allowed'
+                                    : 'bg-[#c6714a] hover:bg-[#e0b394]'}`}
                         >
                             DOWNLOAD REPORT
                         </button>
@@ -105,6 +150,6 @@ export default function KeyDataSection() {
                     </form>
                 </div>
             </div>
-        </div>
-    )
+        </section>
+    );
 }
