@@ -31,10 +31,10 @@ export default function KeyDataSection() {
 
 
     return (
-        <section className="bg-[#fdf7ed] px-4 md:px-12 py-12">
+        <section className="bg-[#FED7F9] ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {/* KEY DATA Cards */}
-                <div className=''>
+                <div className=' ml-20 mr-1 mt-10 mb-8'>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY DATA</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                         <Card heading="$45B" text="beauty and personal care market size in India by 2030" />
@@ -55,36 +55,14 @@ export default function KeyDataSection() {
             </div>
 
             {/* KEY INSIGHTS Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
-                <div>
-                    {/* <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY INSIGHTS</h2>
-                    <div className="space-y-6 text-lg md:text-xl leading-relaxed">
-
-                        <div>
-                            <strong>Gen Z & Gen Alpha Are Redefining Beauty Discovery:</strong> These consumers are tech-native, curiosity-led, and community-driven. Discovery happens through AI search, peer recommendations, influencers, and K-culture touchpoints - not through traditional advertising.
-                        </div>
-
-                        <div>
-                            <strong>Cultural Influence Is Converting Curiosity Into Consumption:</strong> From K-pop and K-dramas to K-food and fashion, Korean culture is shaping beauty preferences, accelerating adoption beyond metros into Tier-2 India.
-                        </div>
-
-
-                        <div>
-                            <strong>Influencers & Reviews Drive Decisions, Not Discounts Alone:</strong> Authentic creators, social proof, and real-world efficacy matter more than promotions. 51% are likely to buy K-Beauty endorsed by K-pop idols. 86% say reviews seal the purchase.
-                        </div>
-
-                        <div>
-                            <strong>Omnichannel Matters But Digital Leads the Way:</strong> Consumers are fluid across platforms—from quick commerce to D2C websites—but digital-first discovery dominates. Offline is important for trust, but digital drives trial and repeat.
-                        </div>
-
-
-                    </div> */}
+            <div className="grid bg-[#C0FE94] grid-cols-1 lg:grid-cols-2 gap-10 pt-10">
+                <div className='ml-20 mr-1   mb-10'>
                     <KeyInsights/>
                 </div>
 
                 {/* DOWNLOAD FORM */}
 
-                <div id='download' className="bg-[#f6e7d6] place-self-center h-fit w-full shadow-xl p-8 rounded-3xl border border-[#c6714a]">
+                <div id='download' className="bg-[#f6e7d6] ml-20 mr-1 mt-2 mb-8 place-self-center h-fit  shadow-xl p-8 rounded-3xl border border-[#c6714a]">
                     <h2 className="text-3xl sm:text-4xl text-center mb-6">Download the full Report</h2>
                     <form onSubmit={handleDownload} className="space-y-4">
                         <div>

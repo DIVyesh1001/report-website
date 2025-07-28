@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="w-full ">
       {/* Top Row */}
-      <div className="flex flex-col  md:flex-row items-center justify-between px-8 py-6 bg-[#f5d8be] border-t">
+      <div className="flex flex-col  md:flex-row items-center justify-between px-8 py-6 bg-[#9EAEFE] border-t">
         {/* Logo */}
         <div className="flex items-center gap-2 mb-4 md:mb-0"> 
           {/* <img
@@ -18,6 +18,9 @@ export default function Footer() {
             alt="Intelligence Node"
             className="h-10 w-auto"
           /> */}
+          <div className='align-center'>
+            <span >Report based on primary research: Online survey of 2,018 beauty product buyers across 30 cities in India | © Datum Intelligence, 2025</span>
+          </div>
         </div>
 
         {/* Social Icons */}
