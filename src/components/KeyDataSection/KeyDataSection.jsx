@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
+import KeyInsights from '../KeyInsights/KeyInsights';
 export default function KeyDataSection() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -12,21 +13,21 @@ export default function KeyDataSection() {
     };
 
     const handleDownload = (e) => {
-    e.preventDefault();
-    const { firstName, lastName, email } = formData;
+        e.preventDefault();
+        const { firstName, lastName, email } = formData;
 
-    if (!firstName || !lastName || !email) {
-        alert('Please fill in all fields.');
-        return;
-    }
+        if (!firstName || !lastName || !email) {
+            alert('Please fill in all fields.');
+            return;
+        }
 
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1SWQbXI7qtzgFSvu0XM4cd_UN14WHKnoA/view?usp=sharing';
-    link.setAttribute('download', 'KBeauty_Report.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-};
+        const link = document.createElement('a');
+        link.href = 'https://drive.google.com/file/d/1SWQbXI7qtzgFSvu0XM4cd_UN14WHKnoA/view?usp=sharing';
+        link.setAttribute('download', 'KBeauty_Report.pdf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
 
     return (
@@ -56,7 +57,7 @@ export default function KeyDataSection() {
             {/* KEY INSIGHTS Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
                 <div>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY INSIGHTS</h2>
+                    {/* <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY INSIGHTS</h2>
                     <div className="space-y-6 text-lg md:text-xl leading-relaxed">
 
                         <div>
@@ -76,8 +77,9 @@ export default function KeyDataSection() {
                             <strong>Omnichannel Matters But Digital Leads the Way:</strong> Consumers are fluid across platforms—from quick commerce to D2C websites—but digital-first discovery dominates. Offline is important for trust, but digital drives trial and repeat.
                         </div>
 
-                        
-                    </div>
+
+                    </div> */}
+                    <KeyInsights/>
                 </div>
 
                 {/* DOWNLOAD FORM */}
