@@ -31,7 +31,7 @@ export default function KeyInsights() {
     return (
         <div className=''>
             <div className='mb-5'>
-                <span className='text-5xl font-semibold'>KEY INSGHTS</span>
+                <span className='text-5xl font-semibold'>KEY INSIGHTS</span>
             </div>
         <div className='grid grid-rows-4 gap-5'>
             {keyInsights.map((insights) => (
@@ -39,7 +39,7 @@ export default function KeyInsights() {
                     key={insights.heading}
                     className='flex flex-col lg:flex-row'>
                     <img src={insights.imgURL} alt="" 
-                    className='h-10  w-fit lg:h-10 mr-8 place-self-center ' />
+                    className='h-10  w-fit lg:h-10 mr-8 mt-2 ' />
                     <div className='flex flex-col h-full '>
                         <span className='text-2xl font-semibold mb-2'>{insights.heading}</span>
                         <span className='text-md '>{insights.content}</span>

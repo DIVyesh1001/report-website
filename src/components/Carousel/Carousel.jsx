@@ -1,62 +1,56 @@
 import React, { useState, useEffect } from 'react';
 
-const Carousel = ({ images, autoSlide = true, autoSlideInterval = 3000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const images = [
+  'https://i.postimg.cc/28rNP03w/Screenshot-2025-07-22-120523.png',
+  'https://i.postimg.cc/nV6RwgqL/Screenshot-2025-07-28-160354.png',
+  'https://i.postimg.cc/JzQp0hvy/Screenshot-2025-07-28-160447.png',
+  'https://i.postimg.cc/fRsHMd2n/Screenshot-2025-07-28-160508.png',
+];
 
-  useEffect(() => {
-    if (autoSlide) {
-      const slideInterval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, autoSlideInterval);
-      return () => clearInterval(slideInterval);
-    }
-  }, [autoSlide, autoSlideInterval, images.length]);
+const ImageCarousel = () => {
+  const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrent((prev) => (prev + 1) % images.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  // Autoplay logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(interval); // Clean up on unmount
+  }, [current]);
+
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
-      <div className="overflow-hidden relative h-64  rounded-lg">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-transform transform ${
-              index === currentIndex ? 'translate-x-0' : 'translate-x-full'
-            }`}
-          >
-            <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-          </div>
-        ))}
-      </div>
+    <div className="relative w-full flex justify-center items-center">
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
         onClick={prevSlide}
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-black/30 hover:bg-black/50 p-2 rounded-full z-10 transition"
       >
-        -
+        <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt=""  className='h-5 lg:h-10'/>
       </button>
+
+      <img
+        key={images[current]}
+        src={images[current]}
+        alt="Carousel Image"
+        className="rounded-lg mb-6  shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[70%]"
+      />
+
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
         onClick={nextSlide}
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-black/30 hover:bg-black/50 p-2 rounded-full z-10 transition"
       >
-        -
+        <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="" className='h-5 lg:h-10' />
       </button>
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-4">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`w-2 h-2 rounded-full mx-1 ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
     </div>
   );
 };
 
-export default Carousel;
+export default ImageCarousel;

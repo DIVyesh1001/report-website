@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
 import KeyInsights from '../KeyInsights/KeyInsights';
+import Carousel from '../Carousel/Carousel'
 export default function KeyDataSection() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -45,13 +46,14 @@ export default function KeyDataSection() {
                 </div>
 
                 {/* Tilted Image */}
-                <div className="flex justify-center items-center">
+                {/* <div className="flex justify-center items-center">
                     <img
                         className="rounded-lg mb-6 transform perspective-[1000px] rotate-y-[10deg] rotate-x-[15deg] shadow-xl max-w-full w-[90%] md:w-[75%] lg:w-[70%]"
                         src="https://i.postimg.cc/28rNP03w/Screenshot-2025-07-22-120523.png"
                         alt="Key Visual"
                     />
-                </div>
+                </div> */}
+                <Carousel/>
             </div>
 
             {/* KEY INSIGHTS Section */}
