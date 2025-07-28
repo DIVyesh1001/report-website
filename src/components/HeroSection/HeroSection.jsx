@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function HeroSection() {
     return (
-        <section className="grid max-w-screen-full px-15 bg-[#9EAEFE] h-[90vh] lg:gap-8 xl:gap-0  lg:grid-cols-12">
+        <section className="grid max-w-screen-full px-15 bg-[#9EAEFE] h-full lg:gap-8 xl:gap-0  lg:grid-cols-12">
             
             {/* Content */}
-            <div className="mr-auto lg:ml-20 lg:mt-15 lg:col-span-7 ">
+            <div className="mr-auto lg:ml-15 lg:mt-8 lg:col-span-7 ">
                 <div>
                     <h1 className=" text-5xl md:text-7xl lg:text-7xl leading-tight">
                         K-Beauty in
@@ -27,10 +27,18 @@ export default function HeroSection() {
                 </a>
 
                 {/* Partner Logos */}
-                <div className="grid  grid-cols-3 gap-4 mt-8 mb-8 sm:mb-2">
-                    <img src="https://i.postimg.cc/28RnmZfT/Colorlogo.png" alt="Datum" className="object-contain w-full h-8" />
-                    <img src="https://i.postimg.cc/zGqWHYvg/kindlife-nobackground.png" alt="Kindlife" className="object-contain w-full h-8 " />
-                    <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain w-full h-8" />
+                <div className="grid  grid-cols-3 pl-left gap-4 mt-8 mb-8 sm:mb-2">
+                    <div className=''>
+                        <img src="https://i.postimg.cc/28RnmZfT/Colorlogo.png" alt="Datum" className="object-contain  w-full h-8" />
+                    </div>
+                    <div className=''>
+                    <img src="https://i.postimg.cc/zGqWHYvg/kindlife-nobackground.png" alt="Kindlife" className="object-contain  w-full h-8" />
+
+                    </div>
+                    <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain  w-full h-8" />
+                </div>
+                <div className=" text-xl md:text-2xl mt-10 mb-10 ">
+                    <span className='text-xl'>From K-pop to K-dramas, culture is fueling the rise of K-Beauty in India. With data from 30 cities, this report reveals what’s driving the next beauty wave.</span>
                 </div>
             </div>
 
@@ -39,9 +47,10 @@ export default function HeroSection() {
                 <img
                     src="https://i.postimg.cc/0yZSpXKH/main-image.png"
                     alt="Main Visual"
-                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[57vh] object-contain z-0"
+                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[70vh] object-contain z-0"
                 />
             </div>
+
         </section>
     );
 }
