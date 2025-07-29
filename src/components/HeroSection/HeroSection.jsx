@@ -37,7 +37,7 @@ export default function HeroSection() {
                     </div>
                     <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain  w-full h-8" />
                 </div>
-                <div className=" text-xl md:text-2xl mt-10 mb-5 ">
+                <div className=" text-xl md:text-2xl mt-10 mb-8 ">
                     <span className='text-xl'>From K-pop to K-dramas, culture is fueling the rise of K-Beauty in India. With data from 30 cities, this report reveals what’s driving the next beauty wave.</span>
                 </div>
             </div>
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 <img
                     src="https://i.postimg.cc/VNFs9DSf/kindlife-one-pag.png"
                     alt="Main Visual"
-                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[100vh] lg:m-20  object-cover z-0"
+                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[100vh]   object-cover z-0"
                 />
             </div>
 
