@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function HeroSection() {
     return (
-        <section className="grid max-w-screen-full px-15 bg-[#9EAEFE] h-full lg:gap-8 xl:gap-0  lg:grid-cols-12">
+        <section className="grid max-w-screen-full px-15 bg-[#9EAEFE]  lg:gap-8 xl:gap-32  lg:grid-cols-12">
             
             {/* Content */}
-            <div className="mr-auto lg:ml-15 lg:mt-8 lg:col-span-7 ">
+            <div className="mr-auto lg:ml-15 lg:mt-8 lg:col-span-6 ">
                 <div>
                     <h1 className=" text-5xl md:text-7xl lg:text-7xl leading-tight">
                         K-Beauty in
@@ -37,7 +37,7 @@ export default function HeroSection() {
                     </div>
                     <img src="https://i.postimg.cc/jdHPjSxT/unomer-nobackground.png" alt="Unomer" className="object-contain  w-full h-8" />
                 </div>
-                <div className=" text-xl md:text-2xl mt-10 mb-10 ">
+                <div className=" text-xl md:text-2xl mt-10 mb-5 ">
                     <span className='text-xl'>From K-pop to K-dramas, culture is fueling the rise of K-Beauty in India. With data from 30 cities, this report reveals what’s driving the next beauty wave.</span>
                 </div>
             </div>
@@ -45,9 +45,9 @@ export default function HeroSection() {
             {/* Hero Image */}
             <div className="lg:mt-0 lg:col-span-5 lg:flex">
                 <img
-                    src="https://i.postimg.cc/0yZSpXKH/main-image.png"
+                    src="https://i.postimg.cc/x8Ycgvc3/Slide-52-removebg-preview.png"
                     alt="Main Visual"
-                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[70vh] object-contain z-0"
+                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[60vh] object-contain z-0"
                 />
             </div>
 

@@ -1,51 +1,53 @@
-import React from 'react'
+import React from 'react';
 
 const keyInsights = [
-    {
-        imgURL: 'https://i.postimg.cc/3RMY40xX/brain.png',
-        heading: 'Gen Z & Alpha Redefine Beauty Discovery',
-        content: 'Discovery is led by peer recs, influencers, K-culture & AI search — not traditional ads.'
-    },
-    {
-        imgURL: 'https://i.postimg.cc/y6ysxd4R/kpop.png',
-        heading: 'Cultural Influence Converts to Sales',
-        content: 'K-pop, K-dramas & K-fashion drive beauty adoption beyond metros into Tier-2 India.'
-    },
-    {
-        imgURL: 'https://i.postimg.cc/tJCfY9Wd/star.png',
-        heading: 'Influencers & Reviews Seal the Deal',
-        content: '51% trust K-idol endorsements; 86% say reviews drive final purchase.'
-    },
-    {
-        imgURL: 'https://i.postimg.cc/vmFN5r5Z/mobile-shopping-1.png',
-        heading: 'Omnichannel is Vital, But Digital Wins First',
-        content: 'Trial and discovery start online — from Q-commerce to D2C and repeat buying.'
-    }
-]
-
-
-
-
+  {
+    imgURL: 'https://i.postimg.cc/3RMY40xX/brain.png',
+    heading: 'Gen Z & Alpha Redefine Beauty Discovery',
+    content: 'Discovery is led by peer recs, influencers, K-culture & AI search — not traditional ads.'
+  },
+  {
+    imgURL: 'https://i.postimg.cc/y6ysxd4R/kpop.png',
+    heading: 'Cultural Influence Converts to Sales',
+    content: 'K-pop, K-dramas & K-fashion drive beauty adoption beyond metros into Tier-2 India.'
+  },
+  {
+    imgURL: 'https://i.postimg.cc/tJCfY9Wd/star.png',
+    heading: 'Influencers & Reviews Seal the Deal',
+    content: '51% trust K-idol endorsements; 86% say reviews drive final purchase.'
+  },
+  {
+    imgURL: 'https://i.postimg.cc/vmFN5r5Z/mobile-shopping-1.png',
+    heading: 'Omnichannel is Vital, But Digital Wins First',
+    content: 'Trial and discovery start online — from Q-commerce to D2C and repeat buying.'
+  }
+];
 
 export default function KeyInsights() {
-    return (
-        <div className=''>
-            <div className='mb-5'>
-                <span className='text-5xl font-semibold'>KEY INSIGHTS</span>
+  return (
+    <div className="px-4 py-8">
+      <div className="mb-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">KEY INSIGHTS</h2>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-rows-4 gap-6">
+        {keyInsights.map((insight) => (
+          <div
+            key={insight.heading}
+            className="flex items-start gap-4  "
+          >
+            <img
+              src={insight.imgURL}
+              alt={insight.heading}
+              className="h-12 w-12 object-contain mt-1 shrink-0"
+            />
+            <div>
+              <h3 className="text-lg md:text-xl font-semibold mb-1">{insight.heading}</h3>
+              <p className="text-sm text-gray-700">{insight.content}</p>
             </div>
-        <div className='grid grid-rows-4 gap-5'>
-            {keyInsights.map((insights) => (
-                <div
-                    key={insights.heading}
-                    className='flex flex-col lg:flex-row'>
-                    <img src={insights.imgURL} alt="" 
-                    className='h-10  w-fit lg:h-10 mr-8 mt-2 ' />
-                    <div className='flex flex-col h-full '>
-                        <span className='text-2xl font-semibold mb-2'>{insights.heading}</span>
-                        <span className='text-md '>{insights.content}</span>
-                    </div>
-                </div>))}
-        </div>
-        </div>
-    )
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
