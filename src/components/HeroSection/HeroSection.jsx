@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function HeroSection() {
     return (
-        <section className="grid max-w-screen-full px-15 bg-[#9EAEFE]  lg:gap-8 xl:gap-32  lg:grid-cols-12">
+        <section className="grid max-w-screen-full px-15 bg-[#9EAEFE]  lg:gap-8 xl:gap-8 lg:grid-cols-12">
             
             {/* Content */}
             <div className="mr-auto lg:ml-15 lg:mt-8 lg:col-span-6 ">
                 <div>
-                    <h1 className=" text-5xl md:text-7xl lg:text-7xl leading-tight">
+                    <h1 className=" text-5xl md:text-7xl lg:text-7xl ">
                         K-Beauty in
                     </h1>
                     <h1 className="font-times text-5xl md:text-7xl lg:text-7xl mt-1 leading-tight">
@@ -15,7 +15,7 @@ export default function HeroSection() {
                     </h1>
                 </div>
 
-                <div className="text-xl md:text-2xl mt-5 mb-10 leading-relaxed">
+                <div className="text-xl md:text-2xl mt-5 mb-8 leading-relaxed">
                     <p>Trends & Consumer insights by Datum.</p>
                 </div>
 
@@ -43,11 +43,11 @@ export default function HeroSection() {
             </div>
 
             {/* Hero Image */}
-            <div className="lg:mt-0 lg:col-span-5 lg:flex">
+            <div className="lg:mt-0 lg:col-span-6  lg:flex rounded-xl ">
                 <img
-                    src="https://i.postimg.cc/x8Ycgvc3/Slide-52-removebg-preview.png"
+                    src="https://i.postimg.cc/VNFs9DSf/kindlife-one-pag.png"
                     alt="Main Visual"
-                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[60vh] object-contain z-0"
+                    className="w-full max-w-[400px] md:max-w-[600px] rounded-xl lg:max-w-[100vh] lg:m-20  object-cover z-0"
                 />
             </div>
 
