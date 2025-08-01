@@ -35,9 +35,9 @@ export default function KeyDataSection() {
         <section className="bg-[#FED7F9] ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {/* KEY DATA Cards */}
-                <div className=' ml-5 mr-5 lg:ml-20 mt-10 mb-8'>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">KEY DATA</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                <div className=' ml-5 mr-5 lg:ml-20 mt-5 lg:mb-5'>
+                    <h2 className="text-3xl questrial-regular sm:text-4xl lg:text-5xl font-semibold mb-6">KEY DATA</h2>
+                    <div className="grid questrial-regular grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                         <Card heading="$45B" text="beauty and personal care market size in India by 2030" />
                         <Card heading="$1.5B" text="K-beauty market size in India by 2030 " />
                         <Card heading="25.9%" text="CAGR (2024-30) for K-beauty segment" />
@@ -53,18 +53,20 @@ export default function KeyDataSection() {
                         alt="Key Visual"
                     />
                 </div> */}
-                <Carousel/>
+                <div className=' lg:mt-25 mb-5'>
+                    <Carousel/>
+                </div>
             </div>
 
             {/* KEY INSIGHTS Section */}
-            <div className="grid bg-[#C0FE94] grid-cols-1 lg:grid-cols-2 gap-10 pt-10">
-                <div className=' ml-5 mr-5 lg:ml-20 mr-1  mb-10'>
+            <div className="grid bg-[#BDFEF6] grid-cols-1 lg:grid-cols-2 gap-10 pt-10">
+                <div className='questrial-regular  lg:ml-20 mr-1  mb-8'>
                     <KeyInsights/>
                 </div>
 
                 {/* DOWNLOAD FORM */}
 
-                <div id='download' className="bg-[#f6e7d6] ml-5 mr-5 lg:ml-20 mt-2 mb-8 place-self-center h-fit  shadow-xl p-8 rounded-3xl border border-[#c6714a]">
+                <div id='download' className="bg-[#f6e7d6] questrial-regular ml-5 mr-5 lg:ml-20 mt-2 mb-8 place-self-center h-fit  shadow-xl p-8 rounded-3xl border border-[#c6714a]">
                     <h2 className="text-3xl sm:text-4xl text-center mb-6">Download the full Report</h2>
                     <form onSubmit={handleDownload} className="space-y-4">
                         <div>

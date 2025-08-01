@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full ">
+    <footer className="w-full questrial-regular">
       {/* Top Row */}
       <div className="flex flex-col  md:flex-row items-center justify-between px-8 py-4 bg-gray-700 border-t">
         {/* Logo */}
